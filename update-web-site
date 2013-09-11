@@ -1,0 +1,11 @@
+#!/bin/bash -eux
+
+#scp -rp * uruz.pair.com:public_html/
+
+echo 'These files will be transferred:'
+find . -newer last-updated-web-site |grep -v "./.git"|grep -v "^.$"
+read -p "Hit ^C now if they are not the right ones..."
+
+find . -newer last-updated-web-site |grep -v "./.git"|grep -v "^.$"|xargs -I{} scp -rp {} uruz.pair.com:public_html/
+
+touch last-updated-web-site 
