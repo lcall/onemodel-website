@@ -1,0 +1,137 @@
+--- Requirements List for One Model Project ---
+
+Licensing:  
+    Released under the GNU General Public License. For details, see 
+    http://www.fsf.org/copyleft/gpl.html.
+
+Revision history
+    17 July 1999, Luke A. Call: creation, initial copyright.
+    1999.07.17, Thomas L. Packer: various modifications.
+    1999.07.18 lac took out LGPL reference.
+    2000.07.08 lac added couple term definitions and note about outline, and requirement about distributed systems; changed project name to "one model"
+    2003.05.03 lac changed from emacs-style outline to jedit-style (easier for others to read?).
+
+Suggested style notes: 
+    Improve style notes freely but let's keep it short. :)
+    All headings start with the number of spaces that matches their
+    depth in the outline. Farther indented means deeper in the outline.
+    (This is a nice collapsible outline in emacs; hopefully
+    it's more or less readable in other editors.)
+
+
+HIGH ARCHITECTURAL IMPACT OR TECHNOLOGY RISK
+    Models any arbitrary idea(s)/knowledge:
+        Concepts, their human names, their attributes and behaviors.
+        Shows their place in time and change over time.
+        shape, composition
+        shows location and motion
+        source of all data stored (who entered, when, and where they got it).
+        Examples:
+            genealogical data, including detailed info about the people.
+                including family photographs and anything people now store in a journal, family history, or genealogy software.
+                it should be able to store the things people read and figure out manually now--like county registers and all the facts in them, so a researcher can do a query instead of reading dozens of books to find an answer.
+
+            Capable of holding everything in one's personal notes, the scriptures, personal planner, journal/diary, etc.
+            Can capture text in a book, and not only model the content but, allow one to read and annotate, highlight etc. the text.
+            If the text is not availible in the program, it can provide apparently seamless linkage to other locations, such as over the internet, in order to provide at least a read-only version of the desired text.
+            Can model how a computer or other system is supposed to work, to help figure out why it's broken or understand enough to fix software or tell you how to fix hardware.
+                Can model the configuration of a system for later programs to be written which could reconfigure the system; for example, after formatting a HDD and re-installing an operating system, a program could use the previous system information to regain the users original preferences.
+
+            Food recipes
+            All the how-to technical information available on the 'net.
+            capable of tracking material composition & source of materials, down to pieces of cloth in a quilt, fibers, chemical composition, and modeling the atoms, and where you got the quit, who made it, when, materials' source, etc.
+            mundane things like tracking time or money spent, or plans to.
+            geographical, mapping data
+
+    Ability to move the model toward one complete, concise, coherent, and adherent model of truth. (coherent means internally consistent; adherent means consistent with the physical world).
+        Gives the user the option to accept a recommended change to the model according to program algorithms and/or heuristics.
+        Recommended changes may include the following:
+            The unification of redundent concepts (nodes), (toward conciseness).
+            The inference of new knowledge from old knowldge (toward completeness).
+            The removal of contradiction through deductive proof algorithms (toward coherence).
+            The reconciliation of one user's model with a greater estimation of the state of the universe, as derived inductively from sources of knowledge outside the given user's personal model, such as another user's database (toward adherence).
+
+    Lets many people share the same database if desired, or have separate ones.
+    Allows for very interesting queries, for example:
+        Can sort out which are the members of a given "class" (set) to be considered by a query (or for other processing purposes), even though not all members of the set are identical. (for example: being, person, male/female, physical object, spirit, other mammal).
+        In other words: Can return the identities of the members of a set of an arbitrarily abstract or concrete querry specification, regardless of non-exclusive differences between the total state of the member and specific state of the qualifying/specified aspect(s).  These qualifying aspects may be explicitly or implicitly stated by the query, i.e. the algorithm uses a "transative closure" method of acknowledging all specific instances of a quality regardless of directness or indirectness of the specifications.
+        Gives the option to do one of the following in case of ambiguous queries:
+            Request additional information from the user to clarify/eliminate ambiguity in the query.
+            Outputs all information resulting from an ambiguous query, even though not all the information will not likely be needed.
+
+        "who were the most effective leaders (for good/evil)?"
+        "what are the best known materials and design for this project/product, given goals of 'x'?"
+        lets a person remember something they saw/did/recorded, by associating it automatically with time, related objects, people, etc. or whatever else the person might remember about it, which is recorded.
+        Allows for metalinguistic querries, as in the functionality of a rhyming dictionary.
+        Allows for combinations of queries, such as searching for a word or phrase with a combination of a certain general meaning, a certain phonemic quality, and a certain graphemic quality.
+        query on or predict individual or statistical medical data, based on stored (anonymous) info about people's attributes, habits; (i.e. combines case studies and multivariate statistical information into the quarriable database).
+        what are the likely macroeconomic results of "x"?
+        facts/data derived from existing data are as valid and queryable as data from outside sources.
+        plays out "what if" scenarios
+            change a variable and let time pass through the model (comparable to and capable of things like atmospheric, atomic, economic modeling, etc.). The stored behaviors of the truths then interact and show consequences.
+            can attempt to predict the future based on all stored data or "what if" stuff thrown at it (or generated by some altorithm?)
+            relevant quote? posted by Yogesh Malhotra on February 20, 1998 at 08:44:30 at www.brint.com:
+                "The basic issue is that if the model needs to handle more interesting 'non-linear' type of issues, it should be able to:
+                     (a) sense the environmental factors;
+                     (b) be able to consider multiple (convergent & divergent) interpretations of sensed information; 
+                     (c) self-correct / modify / alter its assumptions and logic in accordance with sensed information;
+                     (d) facilitate translation of changed information (assumptions / logic) into real world action."
+                (Details on the context of this quote are available.)
+
+    allows one to use a publicly available database for storage/use yet have private data
+        security limits access to personal or proprietary information
+        maybe: allows public? data collection of anonymous statistical data on individuals w/o compromising personal stuff?
+
+    allows separate model databases to be combined and reconciled.
+    distributed system allows use of storage space and processing iin disparate places on the internet (multiple individuals' PCs, multiple web sites)
+
+
+CRITICAL IN A USEFUL SYSTEM
+    a human interface for adding data and maintain all aspects of the system
+
+
+IMPORTANT
+    allows use from multiple locations
+    has a useful way of populating the data model in bulk
+        grammar parser (computational lingustics program) reads any text and finds grammatical elements, uses them to build the database.
+            with possible human help or corrections, but automated as much as possible.
+            processes all known and accessible written material.
+        can use data input from non-textual databases
+
+    can capture what is "in someone's head"
+    reasonable performance
+    resolves inconsistencies (asking for human help if needed?)
+    calculates/saves whether something is "true" and how it decided.
+        deals well with separate representations for what is "true" and what "someone said"
+            deals well with end users who share the same database but have different beliefs and want to be presented with versions of "truth" based on their own assumptions. (your scripture, my scripture, your theory, my theory). Can tell the difference between absolute truth based on whatever assumptions, versus consensus among customers.
+                Can let people know when their assumptions or facts conflict? Hm.
+
+    multilingual/internationalized
+    multiple display and output file formats, 
+        at least one simple (probably textual) display format and one ASCII file format to start with.
+
+ANCILLARY (sounds OK but may not be important)
+    some kind of import/export?
+    private, secure data becomes public after 70 years of death (or just as soon as the "owner" allows), or allows switching to a new owner or something semi-automatically?
+
+    makes "AI" work better, somehow.
+        providing a knowledge base for "machine learning" etc
+        using AI lessons learned, internally
+
+    is aware of itself (sentient?) and can analyze or model its own behavior
+    populates data with independent observations of the world through sensors
+    tries to make rules to derive additional facts or to predict the future better, and refines them. (genetic algorithms, and all the stuff learned from AI so far?)
+        one example would be to predict a person's behavior based on observations of that person in the past and what is recorded in the model about various kinds of people.
+
+    what does it do w/ metaphors? plans & expectations? intent or desire?
+
+
+OTHER (unsure if important or if anyone wants it)
+
+
+UNSORTED (dumped here to be added to an above section later)
+
+
+
+(next line is for jedit)
+:folding=indent:collapsefolds=2:
