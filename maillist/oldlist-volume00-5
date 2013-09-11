@@ -1,0 +1,622 @@
+From: general-digest-list-request@onemodel.org
+Subject: general-digest-list Digest V00 #5
+X-Loop: general-digest-list@onemodel.org
+X-Mailing-List: <general-digest-list@onemodel.org> archive/volume00/5
+Precedence: list
+MIME-Version: 1.0
+Content-Type: multipart/digest; boundary="----------------------------"
+To: general-digest-list@onemodel.org
+Reply-To: general-list@onemodel.org
+
+------------------------------
+
+Content-Type: text/plain
+
+general-digest-list Digest				Volume 00 : Issue 5
+
+Today's Topics:
+  Re: use cases                         [ "Tom and other Packers" <TomP@Burgo ]
+  Re: use cases                         [ Mark Butler <butlerm@middle.net> ]
+  Re: use cases                         [ "Tom and other Packers" <TomP@Burgo ]
+  Re: use cases                         [ Lee Howard <redder@deanox.com> ]
+  mailing list software                 [ Luke Call <lacall@onemodel.org> ]
+
+------------------------------
+
+Date: Fri, 11 Aug 2000 08:09:04 -0600
+From: "Tom and other Packers" <TomP@Burgoyne.Com>
+To: general-list@onemodel.org
+Cc: "OM List" <general-list@onemodel.org>
+Subject: Re: use cases
+Message-ID: <003601c0039d$cacaa1c0$0b03a8c0@oemcomputer>
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+Luke
+
+    I guess my message didn't get to Mark...?  Not a big deal.  (I'll paste
+it below.)  I think I agree with Mark here.
+
+    About multiple inheritance, fuzzy set theory makes this work better, and
+more correctly models natural language sets.  There is much less chance of
+conflict.
+
+tomp
+
+        ````````````````````````
+
+
+Luke
+
+    I'm not sure I understand your question yet, but, maybe if I start
+"talking", something will connect.
+
+    I'm not saying that the distinction between "class" and "object" doesn't
+exist. I'm saying that the model shouldn't make that distinction, because
+it's an arbitrary one.  If the model makes a distinction between levels of
+generality, then why not make a distinction between every other pair of
+entities which are related by a directed-edge (in graph theory), i.e. an
+asymmetric internode (in Mathesis), i.e. an intransitive relation?  Some of
+these other relations are subtypes of the "is-a" relation, (and therefore
+can be "related", i.e. "meta-related" to the generic "is-a" relation, using
+meta-internodes).  For example, "make", "model", etc. are sub-types of the
+"is-a" relation, defined specifically for automobiles.
+
+    Relations like "is-a" are often hard-coded because they are very useful.
+But if we hard-code this one, and not others, we risk writing algorithms
+which only make use of a narrow subset of the possible relations, and
+therefore make a model which is not fully generalised, not able to take
+advantage of the other relations as well.  If we don't add any distinction
+between relations, and are forced to define all relations the same, using
+meta-relations, we are more likely to be able to handle any arbitrary
+knowledge the same.
+
+    In the future, I do expect to add "is-a", "has-a", and other very
+commonly used relations, before the user does, but in the same form as all
+other relations, so there is a commonality among all relations, a
+uniformity -- no arbitrary distinctions.
+
+    The distinction between class and object is even more artificial, I
+believe, because the "is-a" relation, (I prefer to call it the "supertype"
+relation), applies to a class and its superclass.  In other words, there are
+fewer instances of the relation between object and class than there are
+instances of the "is-a" relation.
+
+    I still don't know what you mean when you ask "what is the 'is-a
+pointing' to"?  Since "is-a" is intransitive, it will of course by
+"directed", so instead of a line, it would be represented by an arrow.  So,
+if we define this relation strictly enough, such that there is an order
+specified (which "is-a" implies, but you have to remember that there are
+three very closely related relations that I've been talking about when I say
+"is-a": (1) the "subtype-to-supertype" relation, (2) the
+"supertype-to-subtype" relation, (in both of which, order does matter), and
+(3) the union of these to sets of relations, "subtype/supertype", (in which
+order does not matter).  If we use the name "is-a", then we are obviously
+forced to chose the "subtype-to-supertype" direction for the arrow.  But we
+could just as easily used the alternate ordering (though we'd have to use a
+different English name for the relation in context).
+
+    By the way, I do prefer models in which the larger volume (i.e. more
+general) entity is on the left, and the smaller volume entity is on the
+right, so I would not use "is-a".  "Has-a" does have the preferred ordering,
+so I would be more likely to use it.  But again, I don't think the final
+product should restrict ordering.
+
+    Okay, I'm starting to understand.  I've come across a couple of problems
+in modelling of this kind, (in my thought-experiments), and maybe you are
+talking about both of these.
+
+    First Problem: Specifying the correct level of generality (the
+intentional vs. extensional definition) of the entity being related.  For
+example, given a temporal relation, "one-hour-after", and given two events
+"my meeting at 11:00", and "my lunch break", you can relate the two given
+events/entities using the given relation.  That's obvious.  But what if the
+time of the meeting changes.  The meeting is moved to a time earlier in the
+day by a half-hour.  Does the lunch break also move to a time earlier in the
+day by a half-hour, or does it stay at 12:00?  It all depends on
+"significance":  What was the significant relation?  What was the incidental
+relation?
+
+    First Solution: I think it's obvious: the user must define the
+significant relation.  All other incidental relations will be deductively
+inferred by the logic of the program.  If the significant relation, or
+either of the entities which it connects, changes, then the inferred,
+incidental relations will be re-inferred.
+
+    Second Problem: Specifying differential certainty among multiple
+relations, and dependency among certainty sets.  I think this is probably
+more what you (Luke) were talking about, but I can't think of a very
+effective example to use.  It would illustrate instances when two relations
+had the same certainty assigned to them because the knowledge which they
+encoded came from the same source.  If one relation was found to be wrong,
+then the other would also be wrong.  They would change certainty together.
+
+    Second Solution: inclusion of "worldviews" into the model.  A worldview
+is assigned a certainty, and all relations would be classified as belonging
+to this or that worldview (and perhaps more than one -- redundancy is very
+good in promoting certainty).
+
+    I don't have enough time before I go to work to explain myself very well
+here.  But I think these two solutions would take care of your need for a
+"type definer".  Everything an entity is related to should define it.  This
+is a fundamental law in Em-Veh.  So it's artificial to say that only certain
+relations actually define a given entity.  More natural, I think, would be
+to define relations more precisely (as in problem one), and to define
+certainty (as in problem two).
+
+    Also, multiple "is-a" internodes are desired, and necessary, I believe.
+The way to handle this (if I know which sense you mean, by "multiple is-a
+relations"), is using meta-internodes.  You define the specific type of is-a
+relationship, and the, for logic requiring the ability to know of all "is-a"
+relationships, regardless of specificity, as in a query with little
+constraint, it would use the meta-internodes, and perform a wider search.  F
+or narrower searches, such as for "makes and models" of cars, it would not
+need the dispersing-effect of meta-internodes.
+
+    Make sense?
+
+ciao,
+tomp
+
+
+
+----- Original Message -----
+From: Mark Butler <butlerm@middle.net>
+To: Luke Call <lacall@onemodel.org>
+Cc: <general-list@onemodel.org>; Thomas L. Packer <TomP@burgoyne.com>
+Sent: Thursday, August 10, 2000 11:37 PM
+Subject: Re: use cases
+
+
+Luke: I seem to have been inadvertantly unsubscribed from the list - Could
+you
+post this for me?  - Mark
+
+Luke Call wrote:
+> If an object defines a class (I'll use the term "entity" in a bit), then
+> when you create another object and want to indicate that it's of the
+> same class, that part seems straightforward enough--the properties
+> available by default (needn't all be filled or even allocate space--just
+> be conveniently there in the interface if needed, plus an "is-a"
+> reference made)
+
+This is a very good user interface idea.  Perhaps we could have an option to
+display Visual Basic / Delphi style attribute/value lists for new users to
+fill in when they define a new object.
+
+>, is the "is-a" reference pointing to a class or an
+> object?
+
+The "is-A" reference generally points to a class unless you want to express
+identity instead of membership (the latter usually being pointless unless
+you
+lack editorial control over the two objects).  The idea is that "class" and
+"object" should both be considered to be of more general type "entity".
+Again, an object is logically equivalent to a class constrained to have that
+object as its only member.   e.g. Ronald Reagan == {the set of all U.S.
+presidents named Ronald Reagan}, or more generally   A == { A }.  *
+
+
+> For example, if I define a truck object, and name it "truck" and
+> "my 1982 mazda", and I then want to create another truck object, is it
+> going to be of type "truck" or a "1982 mazda"? Obviously I want truck,
+> but I'm not (yet) envisioning how the relationship would work there,
+> i.e., how it would know which concept the "is-a" points to (or even if
+> it needs to know). And, if I change the "superclass", how does that
+> affect other objects of the same type?
+
+When you give it the name "truck" you imply one of two things:
+
+  1. This is the only truck of any kind in the world
+  2. This is a member of a larger class of trucks.
+
+In order to make the linguistic tags useful, it is important that the
+correct
+or proper names be so marked, because while "truck" cannot be considered a
+proper name for a single instance of a truck, it is most definitely the
+proper
+name for an entity that identifies the set of all trucks.
+
+> Let's suppose the answer is this:  the "is-a" relationship pretty much
+> only exists as a convenience for queries, but not to define what data
+> must be present.
+
+Yes.  Except a class may also define strict rules that must be assumed to be
+correct for all members of a class.  e.g. If I say that {A.weight < 100 lbs}
+and B is A then I must be able to say that B.weight < 100 lbs.
+
+> And if you change an entity, no problem, it only
+> affects that entity and the rest of the entities in the system are not
+> affected. Simple enough, and very flexible. But then suppose I want to
+> enhance the level of understanding in my system about "trucks", by
+> adding properties to some superclass "physical object" about newtonian
+> physics, with the intent that all entities that are "physical objects"
+> now can have mass, and certain predictable physical behavior, etc. How
+> would that change be propagated?
+
+That is an implementation issue.  Logically, if you have all the attributes
+of
+the superclass at hand, it is a simple matter to treat them as if they were
+just as valid as if specified in the sub class and the super class was not
+present in the system at all.
+
+>
+> Here's one other idea--maybe we can mark an entity as being the "type
+> definer" for a class, so that changes to it affect all entities which
+> have an "eventual" is-a relationship to it. When making changes to the
+> structure (properties/methods) of some other entity with an upward
+> "is-a" relationship to the "type definer", the system could wonder
+> whether this is an exception ("it's a truck, but it's different from the
+> type-definer truck", which sounds normal enough), or if it will be used
+> as a new "type definer" later, on its own. Maybe some entity becomes a
+> type-definer only when something else points to it with an "is-a"
+> relationship, rather than being specially marked?
+
+The "type definer entity" is the entity corresponding to the class itself.
+I.e. A "class" "is A" "entity".
+
+> It may be that if we have the ability to create such flexible is-a
+> relationships throughout the data set, and can easily traverse them,
+> that it meets our needs, but we need to think about the implications for
+> querying, internal coherency (right term?), and support for all the
+> other features we envision.
+
+Definitely - there must be checks to locate inconsistencies and allow
+removal
+or refinement.  Attributes and relationships can be considered to be a set
+of
+equations in multiple variables - if you can't find simultaneous solutions
+for
+all attributes of an entity then one of the following applies:
+
+1. The entity is not real
+2. One or more of the attributes are not real
+3. One of the relationships / constraints is false and needs to be revised.
+
+[I am assuming here we are primarily modeling reality]
+
+> Another idea--is-a relationships may need to be defined or revised after
+> the entities affected already exist. Perhaps the implication is that any
+> entity whose properties aren't all set inherits the values for those
+> properties that are set in the "type-definer" parent, such as size,
+> mass, etc. Could be a timesaver for simulations or depictions where you
+> want to guess at things when you lack actual measurements?
+
+Any attribute that is a guess or a default needs to be clearly marked as suc
+h
+so that we do not introduce logical inconsistencies.  If I say A.x = 5 and B
+is an A, then I cannot say B.x = 6 because that implies that B is not A.
+What
+would be mathematically correct is to say that A.x has a certain probability
+distribution centered around the value 5 with standard deviation 2.  Or we
+could just say that A.x has nominal / normal / default value 5, but is not
+constrained to be such.
+
+> And can you have multiple "is-a" relationships? It would be handy for
+> some things, but again, we may want to review the implications as we
+> work through this.
+
+Absolutely.  Multiple inheritance is extremely important - the only
+ambiguity
+comes when you allow sub classes to override parent classes - in the real
+world I cannot be strictly considered to be both an A and a B unless A and B
+have no conflicts.  if I inherit only some of the attributes of each that is
+a
+similarity relationship rather than an "is A" relationship, object oriented
+convention notwithstanding.
+
+- Mark
+
+
+
+--
+Mark Butler        ( butlerm@middle.net )
+Software Engineer
+Epic Systems
+(801)-451-4583
+
+------------------------------
+
+Date: Fri, 11 Aug 2000 09:52:46 -0600
+From: Mark Butler <butlerm@middle.net>
+To: Tom and other Packers <TomP@Burgoyne.Com>
+CC: general-list@onemodel.org
+Subject: Re: use cases
+Message-ID: <3994214E.E38594BB@middle.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Tom and other Packers wrote:
+
+[Very clear exposition deleted]
+
+>     I still don't know what you mean when you ask "what is the 'is-a
+> pointing' to"?  Since "is-a" is intransitive, it will of course by
+> "directed", so instead of a line, it would be represented by an arrow. 
+
+Don't you mean "transitive" for a directed relationship rather than
+intransitive?
+
+>     First Problem: Specifying the correct level of generality (the
+> intentional vs. extensional definition) of the entity being related.  For
+> example, given a temporal relation, "one-hour-after", and given two events
+> "my meeting at 11:00", and "my lunch break", you can relate the two given
+> events/entities using the given relation.  That's obvious.  But what if the
+> time of the meeting changes.  The meeting is moved to a time earlier in the
+> day by a half-hour.  Does the lunch break also move to a time earlier in the
+> day by a half-hour, or does it stay at 12:00?  It all depends on
+> "significance":  What was the significant relation?  What was the incidental
+> relation?
+>
+>     First Solution: I think it's obvious: the user must define the
+> significant relation.  All other incidental relations will be deductively
+> inferred by the logic of the program.  If the significant relation, or
+> either of the entities which it connects, changes, then the inferred,
+> incidental relations will be re-inferred.
+
+I agree - if you are talking about a future event the correct relationship
+depends on the mind of the planners of the events.  If lunch is not planned to
+take place an hour after the start of the meeting by the person who has dual
+control of both the meeting start time and lunch start time, the constraint
+should not be written that way.   If the constraint is written as an hour
+after the start of the meeting as well as 12:00 you have a overconstrained
+plan for the future.
+ 
+>     Second Problem: Specifying differential certainty among multiple
+> relations, and dependency among certainty sets.  I think this is probably
+> more what you (Luke) were talking about, but I can't think of a very
+> effective example to use.  It would illustrate instances when two relations
+> had the same certainty assigned to them because the knowledge which they
+> encoded came from the same source.  If one relation was found to be wrong,
+> then the other would also be wrong.  They would change certainty together.
+> 
+>     Second Solution: inclusion of "worldviews" into the model.  A worldview
+> is assigned a certainty, and all relations would be classified as belonging
+> to this or that worldview (and perhaps more than one -- redundancy is very
+> good in promoting certainty).
+
+I agree, but an even better enhancement is to derive the drop in certainty of
+relation 2 by traversing the co-derivation of relation 1 and relation 2.  That
+way you can better determine whether relation 2 is a mistake or whether the
+whole worldview is not to be trusted.
+
+By the way, rather than storing certainty / degree of belief as a number P
+between zero and one, storing it in "log likelihood" form as log (P / ( 1 - P
+)) makes it far easier to both read and to do calculations.   Some examples:
+
+
+Belief Level    Degree of Belief (0 .. 1)
+------------    -------------------------
+-4		0.000099  (roughly 10 ^ -4)
+-3		0.000999  (roughly 10 ^ -3) 
+-2		0.009901  (roughly 10 ^ -2)
+-1		0.090909  (roughly 10 ^ -1)
+ 0		0.5000
+ 1		0.9091    (roughly 1 - (10 ^ -1) )
+ 2		0.9901    (roughly 1 - (10 ^ -2) )
+ 3		0.9990    (roughly 1 - (10 ^ -3) )
+ 4		0.9999	  (roughly 1 - (10 ^ -4) )
+
+The nice thing about this form is that if you have several independent pieces
+of evidence that are invidually sufficient to prove a hypothesis if true, you
+can just add the logarithmic belief levels and get a correct net belief level.
+ 
+- Mark
+
+-- 
+Mark Butler	       ( butlerm@middle.net )
+Software Engineer  
+Epic Systems              
+(801)-451-4583
+
+------------------------------
+
+Date: Fri, 11 Aug 2000 22:00:03 -0600
+From: "Tom and other Packers" <TomP@Burgoyne.Com>
+To: general-list@onemodel.org
+Cc: "OM List" <general-list@onemodel.org>
+Subject: Re: use cases
+Message-ID: <001e01c00411$e8de1ec0$1f04a8c0@oemcomputer>
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+Mark
+
+    Sorry.  I knew I should have proof-read that letter.  I didn't mean
+intransitive, I meant non-commutative, where you can't reverse the order.
+
+    The over-constraint ideas, I also believe.
+
+    As for the rest, I think we really need to get together sometime and
+talk about all this.  I know I'm not grasping everything that Mark is
+saying.
+
+    By the way, I probably won't be going to the movies with you and your
+ward tomorrow.  I've got two other potential activities, and ... It's hard
+to decide which one ...
+
+tomp
+
+----- Original Message -----
+From: Mark Butler <butlerm@middle.net>
+To: Tom and other Packers <TomP@burgoyne.com>
+Cc: <general-list@onemodel.org>
+Sent: Friday, August 11, 2000 9:52 AM
+Subject: Re: use cases
+
+
+Tom and other Packers wrote:
+
+[Very clear exposition deleted]
+
+>     I still don't know what you mean when you ask "what is the 'is-a
+> pointing' to"?  Since "is-a" is intransitive, it will of course by
+> "directed", so instead of a line, it would be represented by an arrow.
+
+Don't you mean "transitive" for a directed relationship rather than
+intransitive?
+
+>     First Problem: Specifying the correct level of generality (the
+> intentional vs. extensional definition) of the entity being related.  For
+> example, given a temporal relation, "one-hour-after", and given two events
+> "my meeting at 11:00", and "my lunch break", you can relate the two given
+> events/entities using the given relation.  That's obvious.  But what if
+the
+> time of the meeting changes.  The meeting is moved to a time earlier in
+the
+> day by a half-hour.  Does the lunch break also move to a time earlier in
+the
+> day by a half-hour, or does it stay at 12:00?  It all depends on
+> "significance":  What was the significant relation?  What was the
+incidental
+> relation?
+>
+>     First Solution: I think it's obvious: the user must define the
+> significant relation.  All other incidental relations will be deductively
+> inferred by the logic of the program.  If the significant relation, or
+> either of the entities which it connects, changes, then the inferred,
+> incidental relations will be re-inferred.
+
+I agree - if you are talking about a future event the correct relationship
+depends on the mind of the planners of the events.  If lunch is not planned
+to
+take place an hour after the start of the meeting by the person who has dual
+control of both the meeting start time and lunch start time, the constraint
+should not be written that way.   If the constraint is written as an hour
+after the start of the meeting as well as 12:00 you have a overconstrained
+plan for the future.
+
+>     Second Problem: Specifying differential certainty among multiple
+> relations, and dependency among certainty sets.  I think this is probably
+> more what you (Luke) were talking about, but I can't think of a very
+> effective example to use.  It would illustrate instances when two
+relations
+> had the same certainty assigned to them because the knowledge which they
+> encoded came from the same source.  If one relation was found to be wrong,
+> then the other would also be wrong.  They would change certainty together.
+>
+>     Second Solution: inclusion of "worldviews" into the model.  A
+worldview
+> is assigned a certainty, and all relations would be classified as
+belonging
+> to this or that worldview (and perhaps more than one -- redundancy is very
+> good in promoting certainty).
+
+I agree, but an even better enhancement is to derive the drop in certainty
+of
+relation 2 by traversing the co-derivation of relation 1 and relation 2.
+That
+way you can better determine whether relation 2 is a mistake or whether the
+whole worldview is not to be trusted.
+
+By the way, rather than storing certainty / degree of belief as a number P
+between zero and one, storing it in "log likelihood" form as log (P / ( 1 -
+P
+)) makes it far easier to both read and to do calculations.   Some examples:
+
+
+Belief Level    Degree of Belief (0 .. 1)
+------------    -------------------------
+-4 0.000099  (roughly 10 ^ -4)
+-3 0.000999  (roughly 10 ^ -3)
+-2 0.009901  (roughly 10 ^ -2)
+-1 0.090909  (roughly 10 ^ -1)
+ 0 0.5000
+ 1 0.9091    (roughly 1 - (10 ^ -1) )
+ 2 0.9901    (roughly 1 - (10 ^ -2) )
+ 3 0.9990    (roughly 1 - (10 ^ -3) )
+ 4 0.9999   (roughly 1 - (10 ^ -4) )
+
+The nice thing about this form is that if you have several independent
+pieces
+of evidence that are invidually sufficient to prove a hypothesis if true,
+you
+can just add the logarithmic belief levels and get a correct net belief
+level.
+
+- Mark
+
+--
+Mark Butler        ( butlerm@middle.net )
+Software Engineer
+Epic Systems
+(801)-451-4583
+
+------------------------------
+
+Date: Sat, 12 Aug 2000 00:53:48 -0600
+From: Lee Howard <redder@deanox.com>
+To: Luke Call <lacall@onemodel.org>, general-list@onemodel.org
+Subject: Re: use cases
+Message-Id: <3.0.6.32.20000812005348.00809dc0@server.deanox.com>
+Content-Type: text/plain; charset="us-ascii"
+
+Luke, I'd hate to see you spend money on something so simple as a secure
+mailing list.  I can provide that, oodles of web space, among many other
+fine internet toys.  Setting up such a secure mailing list wouldn't take
+more than an hour or so of time... plus a web archive.
+
+I'm not saying that I *want* this responsibility, but I don't think it's
+worth any additional money, when the resource is right here in my lap.
+
+But maybe you should look into SmartList.  It's supposed to work dandy for
+anyone with web space, whether or not they have root priviledges or not
+(just user priviledges).
+
+Lee.
+
+At 07:01 AM 8/11/00 -0600, Luke Call wrote:
+>My apologies to all - if you posted in the last day or so you got a 
+>letter saying you're not in the list. This is supposed to go to people 
+>who post but really aren't in the list, but went to the list instead. I 
+>don't get why, but I'll remove the feature. (I was hoping to avoid the 
+>list getting spammed that way, but maybe I need to cough up the $ to 
+>switch to their newer system....)
+
+------------------------------
+
+Date: Sun, 13 Aug 2000 12:21:20 -0600
+From: Luke Call <lacall@onemodel.org>
+To: General-list@onemodel.org
+Subject: mailing list software
+Message-ID: <3996E720.6060706@onemodel.org>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Lee Howard wrote:
+
+> Luke, I'd hate to see you spend money on something so simple as a secure
+> mailing list.  I can provide that, oodles of web space, among many other
+> fine internet toys.  Setting up such a secure mailing list wouldn't take
+> more than an hour or so of time... plus a web archive
+....
+
+What I'm using now is the SmartList service provided by pair.com for no 
+additional charge, but its support is deprecated and they say it isn't 
+maintained anymore. Upon checking (finally) I just found out the new 
+list service is free for 20,000 messages a month that they use to 
+replace smartlist (mailman or something; in python). So maybe we're OK 
+for now but it's good to know we have stuff avaiable, and the 
+availability is much appreciated.
+
+Lee or Mark--do we have CVS available, especially with a read-only web 
+link? It would be good to check lists & documentse & code in/out but 
+have them the latest version posted automatically at our web site. 
+Thoughts; opinions?
+
+And while we're at it, do you, Lee and Mark want your names on our web 
+site, since you go "way back" more any anyone but Tom in this project. I 
+have had it both ways but it's easiest to ask what y'all prefer. I don't 
+have any preference.
+
+Luke
+
+--------------------------------
+End of general-digest-list Digest V00 Issue #5
+**********************************************
+
+
+
+

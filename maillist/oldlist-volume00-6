@@ -1,0 +1,125 @@
+From - Tue Feb 20 18:08:10 2001
+X-UIDL: d9fe2bd5fbc91643
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <general-digest-list-request@onemodel.org>
+Delivered-To: lacall-onemodel:org-lacall@onemodel.org
+X-Envelope-To: lacall@onemodel.org
+Received: (qmail 70036 invoked by uid 800); 20 Feb 2001 14:11:00 -0000
+Date: 20 Feb 2001 14:11:00 -0000
+Message-ID: <20010220141100.70035.qmail@uruz.pair.com>
+To: lacall@onemodel.org
+References: <3A927AE2.4010408@onemodel.org>
+In-Reply-To: <3A927AE2.4010408@onemodel.org>
+X-Loop: general-digest-list@onemodel.org
+From: general-digest-list-request@onemodel.org
+Reply-To: Please.write.a.new.mail.instead.of.replying@FIRST.WORD.archive
+Content-ID: <"volume00/6"%general-digest-list-request@onemodel.org>
+Subject: archive retrieval: volume00/6
+Precedence: bulk
+Content-Disposition: inline; filename="volume00/6"
+Content-Type: message/rfc822;
+	directory="volume00"; name="6"
+MIME-Version: 1.0
+
+From: general-digest-list-request@onemodel.org
+Subject: general-digest-list Digest V00 #6
+X-Loop: general-digest-list@onemodel.org
+X-Mailing-List: <general-digest-list@onemodel.org> archive/volume00/6
+Precedence: list
+MIME-Version: 1.0
+Content-Type: multipart/digest; boundary="----------------------------"
+To: general-digest-list@onemodel.org
+Reply-To: general-list@onemodel.org
+
+------------------------------
+
+Content-Type: text/plain
+
+general-digest-list Digest				Volume 00 : Issue 6
+
+Today's Topics:
+  Re: mailing list software             [ Lee Howard <redder@deanox.com> ]
+
+------------------------------
+
+Date: Sun, 13 Aug 2000 20:09:37 -0600
+From: Lee Howard <redder@deanox.com>
+To: General-list@onemodel.org
+Subject: Re: mailing list software
+Message-Id: <3.0.6.32.20000813200937.0080c440@server.deanox.com>
+Content-Type: text/plain; charset="us-ascii"
+
+>What I'm using now is the SmartList service provided by pair.com for no 
+>additional charge, but its support is deprecated and they say it isn't 
+>maintained anymore. Upon checking (finally) I just found out the new 
+>list service is free for 20,000 messages a month that they use to 
+>replace smartlist (mailman or something; in python). So maybe we're OK 
+>for now but it's good to know we have stuff avaiable, and the 
+>availability is much appreciated.
+
+SmartList is secure (well, as secure as e-mail can be - spoofing e-mail is
+quite easy) with username and password checking (for the administrator).
+You'll want to check out the config files, particularly the accept file.
+You can list in the accept file everyone that's allowed to submit posts.
+If a random few make it in, well, it's not a big deal.  I've set up a few
+mailing lists, some commercial, and some for family, but no outside
+problems yet.  In one of the config files you can set it to accept mail
+only from those on the dist list.  I think that's called FOREIGN_SUBMIT if
+I recall right.
+
+>Lee or Mark--do we have CVS available, especially with a read-only web 
+>link? It would be good to check lists & documentse & code in/out but 
+>have them the latest version posted automatically at our web site. 
+>Thoughts; opinions?
+
+I know about CVS, but I'm not familiar with the inner workings of it.  If
+we're going to have a number of programmers working on the project, then I
+would suggest that the project be divided modularly, but that work on any
+part be left open, each keep his own stash of code around, and that someone
+be nominated to "maintain" an authoritative version.  From what I know, I
+think CVS is really designed for programming groups larger than this.
+
+>And while we're at it, do you, Lee and Mark want your names on our web 
+>site, since you go "way back" more any anyone but Tom in this project. I 
+>have had it both ways but it's easiest to ask what y'all prefer. I don't 
+>have any preference.
+
+Honestly it doesn't matter to me.  Tom and I have served as sounding-boards
+for each other's ideas for years (sixteen years) now, and it is true that
+we had conversation about this in its early infancy, and it is true that I
+wrote MW hoping it to serve Tom in some way (but also as a programming
+excersize for me) - in my mind, "so what?".  I'm particularly more fond of
+what we called "the honeycomb" or the "bubble chart", which has served me
+in organizing qualitative things mentally ever since, and which some of my
+missionary companions oohed and ahhed over - but for which I really
+couldn't see any practical application.  Anyway, same goes here - as I
+mentioned to Tom in person a couple of weeks ago (or was that last week?),
+until there's a convincing theory of how to relate two seemingly unrelated
+topics (take zoology and mathematics) in some significant fashion, in some
+practical fashion, all of this means very little to me outside of an
+interesting programming and thinking excersize.
+
+>From what I can see, or from what I have understood, it is the hopes of the
+group (in particular my communication is with Tom) that once a ton of
+information is put into this database we will begin to see patterns and
+from that we'll develop theories.  Honestly, that's good science.  However,
+I'm rather uninterested in data entry.  I'm still suffering some
+disappointment that the MW program was never really utilized because it
+would have provided this first step for me, it would have given me a set of
+data to consider.
+
+So anyway, I could realistically be viewed as a critic or antagonist as
+much as anything else.  Putting my name somewhere to indicate complete
+support of the project may not be 100% accurate for anything more than
+historical purposes.
+
+Lee.
+
+--------------------------------
+End of general-digest-list Digest V00 Issue #6
+**********************************************
+
+
+
+

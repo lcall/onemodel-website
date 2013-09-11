@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>onemodel.org - development</title>
+</head>
+<body bgcolor="white">
+<center>
+<h1>Development information</h1>
+</center>
+<a href="/index.html">Back to main page</a>
+<ul>
+  <li><a href="http://www.onemodel.org/proj/requir.txt">Requirements</a></li>
+  <li><a href="strategy.html">Development strategy</a> (major
+milestones/direction)</li>
+  <li><a
+ href="http://www.pairlist.net/pipermail/om-list/2000-September/000020.html">Phase
+1 success criteria</a></li>
+  <li><a
+ href="http://www.pairlist.net/pipermail/om-list/2000-September/000026.html">Phase
+1 use cases</a></li>
+  <li><a href="http://www.pairlist.net/pipermail/om-list/">Latest
+discussions...</a></li>
+   <li><a href="onemodel-0-03.zip">download</a> version 0.03 (.zip
+format; it still doesn't doesn't do much; just a kind of messy zip of where
+I left off.</li>
+  <li><a href="onemodel-0-02.zip">download</a> version 0.02 (24Feb2004; .zip
+format; it still doesn't do much but adds support for relationships and some code cleanup.</li>
+  <li><a href="onemodel-0-01.zip">(old version 0.01)</a> (03May2003; .zip
+format; it doesn't do much yet; written in Java with PostgreSQL and
+JUnit). Beware, this one unzips into the current directory; newer ones don't.</li>
+  <li><a href="#howYouCanHelp">How you can help</a></li>
+  <li><a href="#developerNotes">Developer notes</a><br>
+  </li>
+</ul>
+<h2><a name="howYouCanHelp"></a>What can you do to help?</h2>
+<p> </p>
+<ul>
+  <li>You can improve this web site.</li>
+  <li>Create source code documentation with javadoc and/or doxygen.</li>
+  <li>We need to read up on things like Protege and the OKBC toolkit,
+and OWL/DAML+OIL and semantic web. Protege might be complementary as an
+interface tool if we can be OKBC compliant or something, and OM could
+serve as a back-end for the semantic web, but I haven't had much time
+to really think either of them over fully.<br>
+  </li>
+  <li>If you have (or know of) a similar project elsewhere, such that a
+pooling of efforts is in order, let us know.</li>
+  <li>Help write code for other phases/features as defined in dev't
+outline and the requirements. Let's discuss it on the mailing list
+first.</li>
+  <li>Anything that says "todo" in the code<br>
+  </li>
+  <ul>
+    <li>review it for thread-safety, security (including in the
+postgresql setup), multiuser issues (use transactions as needed,
+volatile keywd, synchronization, etc?)</li>
+    <ul>
+      <li>for thread-safety, could try the multithreaded junit test
+framework, at http://www.mousepushers.com/java.html#mtjunit?</li>
+    </ul>
+  </ul>
+  <li>Suggest how we could get funding so could work on this full-time
+(or better yet, fill out the forms for us :)</li>
+  <li>If you understand our vision, you could help us design and
+implement, especially if you have thought a lot about this sort of
+thing or if you
+have a software engineering background. Many eyeballs not only fix
+bugs;
+they also find design flaws. I (Luke speaking) don't have a lot of
+experience designing secure systems (though I've read about a
+token-based model or
+whatever it's called and have used and coded with ACLs quite a bit). I
+expect
+we will also want to design for distributed systems, and experienced
+input
+is valued. If you see a need, do it.&nbsp; Major things it needs next
+are
+support for relationships, basic edit, delete features, a
+locally-installable
+DB (easier for a non-tech user to install &amp; use &amp; back up than
+postgresql),
+a good demo dataset, a nicer (cross-platform) installer (that bundles
+an
+optional JRE?), and a GUI. I'm looking at Protege and the OKBC toolkit
+(as
+per Mark's suggestion of some time ago). There are many more things to
+do,
+prominently for integrating/sharing/distributing models.&nbsp;</li>
+  <li>I think a milestone for really making this useful will be to
+share
+data among models (perhaps via the web), like the Web does among
+documents--connectedness
+(models shared among many people) brings utility that increases
+geometrically
+with the amount of sharing. So making this into a shared repository (or
+perhaps
+better, making separate repositories easily linkable), seems important.
+License,
+distribution, and security models for that shared info could be
+interesting.</li>
+  <li>Review what we should know/do differently or better for postgres
+administration &amp; security etc: &nbsp;If someone would like to help
+document
+the proper configuration on postgresql, for security etc., contact me
+and
+I'll show you what I did. (I think I only changed pg_hba.conf from the
+default
+debian install, and there I only modified lines after "Put your actual
+configuration
+here". I'm not sure that's the best approach for security. &nbsp;More
+thoughts:
+limit who can run the app, since anyone can write code to log in as the
+"om"
+user which can do anything in the DB. On the other hand, is that a
+problem
+since any user could do that so you need to limit access some other
+way?
+Or don't give it so much privilege? Or limit accessors at the database
+level--better yet--but by what means of authentication?--need to come
+up w/ something
+there.)&nbsp; Another general thought about security, not well
+developed:
+at the system level, again, you limit who can access the app. It sort
+of
+assumes everyone can do anything, at this point. And I'm wondering if
+the
+way we create secure data would be to have a seaparate oM instance,
+even
+on a separate (local/personal/organizational?) host which can integrate
+w/ any other, over the network, by linking to the hostname (&amp; port
+#?)
+&amp; the object info. Also, may want to revisit the fact that "om"
+logs
+in as a user w/ many privileges, and all the code runs as "om", and
+om's
+password (blank) is in the code. Suggestions welcome.&nbsp;</li>
+<li>Whatever you think is needed.</li>
+</ul>
+<h2><a name="developerNotes"></a>Developer Notes</h2>
+We may want to talk about coding standards sometime.<br>
+<br>
+The QuantityAttribute was modeled after the Quantity idea from Martin
+Fowler's <i>Analysis Patterns</i>. See the files distributed in the
+release download, for anything else at this point.<br>
+<br>
+Why in java? I code on linux, you run on windows, etc. C++ is too much
+work for that, for now, given the minimal payoff for this type of app.
+Python and
+scheme (as in framerd) were also contenders but I started spending too
+much
+of my limited time learning framerd and re-learning scheme to get very
+far
+w/ the project. Don't have as good a reason for not using python,
+perhaps, though there are fewer python programmers, and I'd like to
+maximize others' involvement if possible. Python also is enough slower
+it may matter, has slightly
+fewer API's into other tools (that's changing fast though). Java can
+also
+host python or scheme (perhaps except continuations) if desired. Also,
+I'm
+more productive when I can think in one language all the, time, and
+java
+is in so many places, from handhelds to big servers, enough OS'es,
+phones,
+databases, all kinds of toolkits &amp; vendor api's etc., that for now
+that's
+a win--learn once code anywhere. And it's a very active space for<br>
+exploring new software engineering tools in the last few years (like
+junit and things like jakarta). Then my small brain can focus on the<br>
+ideas instead of the language. You are free to disagree but that's my
+rationale for the moment.<br>
+<br>
+Extreme programming/refactoring/junit: These combined helped me break
+some mental logjams. I think the Refactoring principles (book by
+Fowler) are very helpful and I hope we use them. Also test first,
+"YAGNI" and all. Working code whose design is fluid enough to evolve,
+is better than perfected too-slow design cycles. I also use ant to
+compile, but that &nbsp;doesn't seem mandatory.<br>
+<br>
+Why postgresql: it works, is ACID compliant etc., and should be
+replaceable with anything that implements the Database interface and<br>
+passes the same tests (which may have to be reorganized when we add
+another database type).<br>
+<br>
+<br>
+</body>
+</html>

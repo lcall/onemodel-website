@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>
+onemodel.org - one data model: a single, useful way to store all
+knowledge.
+</title>
+</head>
+<body bgcolor="white">
+
+<center><h1>One data model; a single, useful repository to store all
+knowledge.</h1></center>
+
+<h2>What is onemodel.org?</h2>
+<p>We are a few programmers with the goal of putting all mankind's
+knowledge into a single, extremely useful system. Imagine being able to
+do a query against a database containing anything anyone ever knew or
+recorded. We have a requirements list, and many design ideas which we
+are beginning to organize into a development process. Since that's a
+very large task we plan to start by doing a personal organizer, but basing it
+on analysis and design that will allow for the "big picture" of
+handling arbitrary knowledge. The code will be GPL'ed.
+</p>
+
+<h2>Why tell the world when you don't have any working code?</h2>
+<p>Sounds lame? We have some good ideas we've developed over the past
+several years, but not all the good ones; if you have
+expertise and are interested, we'd like your input in the
+design process, to do things right the
+first time. (In the meantime, we're working on it.) 
+</p>
+
+<h2>Who is onemodel.org?</h2>
+<p>This has started out as Luke Call, Thomas Packer, Mark Butler, and a couple of friends. Feel free to join the mailing list, below.
+</p>
+
+<h2>Contacting us: the mailing list</h2>
+<p>The best way to contact us is to check the links
+on this page, then join the mailing list. You can join 
+or learn about the mailing list at this URL:
+<a
+href="http://www.pairlist.net/mailman/listinfo/om-list">www.pairlist.net/mailman/listinfo/om-list</a>.
+(The list does provide digest and security features.)
+</p>
+
+<h2>More Information</h2>
+<p>Here some links to things we've written in the past about our
+ideas. Some might be slightly old.
+<ul>
+<li><a href="proj/requir.txt">Our requirements list.</a></li>
+<li><a href="papers/km-proposal.html">A proposal</a> Luke posted on
+www.brint.com about knowledge management (www.brint.com has some really
+interesting material, last time I checked).</li>
+<li><a href="http://www.edge.org/3rd_culture/gelernter/gelernter_p1.html">Excellent
+article</a> by David Gelernter. We agree on everything up to his point
+#38 or so, where I would replace his emphasis on chronology plus
+documents as organizing principles, with a full model of everything
+including time, documents, and the concepts expressed in the
+documents. To us, those are just other elements to be
+modeled. (Gelernter is still smarter than I am.)</li>
+<li><a href="links.html">Other related documents</a>
+</ul>
+</p>
+
+<h2>Development information</h2>
+<p>
+Click <a href="devel/index.html">here</a> for the current state of
+development on the project.
+</p>
+
+<h2>What can you do to help?</h2>
+<p>Some suggestions:
+<ul>
+<li>You can improve this web site.</li>
+<li>If you have (or know of) a similar project elsewhere, such that a pooling of
+efforts is in order, let us know.</li>
+<li>If you understand our vision, you could help
+us design and implement, especially if you have thought a lot
+about this sort of thing or if you have
+a software engineering background. Many eyeballs not only fix bugs;
+they also find design flaws.  I (Luke speaking) don't have a lot of
+experience designing secure systems (though I've read about a
+token-based model or whatever it's called and have used and coded with
+ACLs quite a bit). I expect we will also want to
+design for distributed systems, and experienced input is valued. If
+you see a need, do it.
+</li>
+</ul></p>
+</body>
+</html>
+

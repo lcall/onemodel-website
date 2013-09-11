@@ -1,0 +1,55 @@
+<html>
+<body>
+Reply #2 to other comments posted about my proposal; February 1998
+----------------------------------------------
+Martin & Giles:
+
+See my post of 2/13/98 for some clarification (for some reason it got put at the end of the list,
+but it was my earliest reply).
+
+Hearty thanks for your comments and reactions.
+
+My proposal is not about a search engine a tall; it's a modeling tool which stores all data 
+about the items modeled (doesn't store text except coincidentally, but objects and their properties),
+and which happens to have a search capability which can analyze the details of the domain searched
+in order to provide the results. This is *not a text search* or anything similar.
+
+To use the engineering drawings as an example, they are simply stored as objects in the model,
+and not classified until retrieved or processed or "linked" to based on the associations stored
+for them. They could be associated, used in another query, viewed, or retrieved, depending on 
+the need of the moment, based variously on their association with their creator, their 
+time of creation, the shapes of the 
+subcomponents within the drawings, the types of parts used, the creating software, the department 
+using them (& the level of success in that department as measured by various criteria), 
+original storage medium, whether it works with a certain other part, or whatever. Since *everythin*
+about the drawings is stored, they can be retrieved by any association with them, any content
+view, or anything else known at any time about them. No "thesaurus" is used, but associative
+links based on any logical or physical connection: "is-a", "has-a", or "belongs-to", with any
+other object in the database.
+		
+I agree we'd have to filter through the rubbish in some fashion when building the database, but
+that may happen automatically as a result of the design. A couple approaches to doing
+this are 1) making the "final" knowledge model a collaborative effort where disputes are
+resolved in some organized but asynchronous fashion, or 2) simply store both answers (rubbish
+and good stuff), where the only attempt to ascertain "truth" (for now) is simply to state that 
+individual A (an object in the model) held opinion A-1 (another object?), and 
+individual B (also a modeled object) held opinion B-1.  Of course when modeling principles, like 
+economics and physics (as opposed to physical object), it may be trickier but there are base 
+principles that can either be modeled or derived from the observed physical data; the deriviations
+change automatically (without having a committee revamp a theory or any of that business) as the data
+about the physical world changes & is updated.
+
+Fundamentally, this is a proposed tool for storing *all knowledge*. Not a way to stored & retrieve
+all text in the world; it has nothing in common with awk & grep. It uses the text as an input 
+for building the model, but in the process that material is structurally revamped to convert it to 
+classes of objects, data about those objects, and the behaviors of those objects, in a systematic 
+(hence programmable) way. The search is a side-effect. I think it's more interesting to be able to view 
+the objects in 3-d, manipulate them in a virtual sense that "looks" like what you'd do in the physical
+world (in manipulating hammers, saws, wood, software, hardware, whatever, only they are virtual models
+of these & all other classes of objects), and update the model with further creation in that
+"logical" dimension before moving to the phycial creation. Or "browse" to learn. Still, these are all
+side-benefits that are possible, once all knowledge is modeled in an object database.
+
+Does that help? If you've also read my post of 2/13, can you see that it is radically different from text
+searching, and has different uses (possibly eliminating the need for text searches)?</body>
+</html>

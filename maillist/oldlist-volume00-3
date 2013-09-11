@@ -1,0 +1,107 @@
+From: general-digest-list-request@onemodel.org
+Subject: general-digest-list Digest V00 #3
+X-Loop: general-digest-list@onemodel.org
+X-Mailing-List: <general-digest-list@onemodel.org> archive/volume00/3
+Precedence: list
+MIME-Version: 1.0
+Content-Type: multipart/digest; boundary="----------------------------"
+To: general-digest-list@onemodel.org
+Reply-To: general-list@onemodel.org
+
+------------------------------
+
+Content-Type: text/plain
+
+general-digest-list Digest				Volume 00 : Issue 3
+
+Today's Topics:
+  testing mail directly to digest: pls  [ Luke Call <lacall@onemodel.org> ]
+  use cases                             [ Luke Call <lacall@onemodel.org> ]
+
+------------------------------
+
+Date: Mon, 07 Aug 2000 06:50:24 -0600
+From: Luke Call <lacall@onemodel.org>
+To: general-digest-list@onemodel.org
+Subject: testing mail directly to digest: pls ignore
+Message-ID: <398EB090.80506@onemodel.org>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+
+testing, pls ignore
+(Self: Does this go to the main list, as it should?)
+
+------------------------------
+
+Date: Wed, 09 Aug 2000 07:19:26 -0600
+From: Luke Call <lacall@onemodel.org>
+To: general-list@onemodel.org
+Subject: use cases
+Message-ID: <39915A5E.7060209@onemodel.org>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Imagine that you are using the phase 1 version of the system. What are 
+the key operations you would want to perform, and what do you expect the 
+system to do as a result? One such operation, with subsequent system 
+actions and response to the user, is a use case.
+
+First we make a list of the most important use cases, then we choose the 
+most significant ones to elaborate. One use case can "include" another
+(use it like you call a function), or can "extend" another (do the same
+thing only with variations for a particular situation).
+
+This is the beginning of the definition of the most basic structure of 
+our system. We need to think together here and converse about this. Here 
+are the ones I thought of. They might sound excessively simple but we 
+have to start somewhere. They need to be detailed (i.e., add sub-steps 
+for each, which I have begun but thought I'd start here to get some 
+feedback or corrections/thoughts from all):
+
+- system startup
+
+- new class
+
+- new object
+
+- (navigation among objects--needs to be broken down more concretely)
+
+- add a name to a class
+
+- add property (to class)
+
+- choose property type (required by add property)
+
+- edit property
+
+- delete property
+
+- delete object
+
+- delete class
+
+- add/edit/delete relationship (between objects; is this just another 
+instance of the "add/edit/delete property" use cases, with the 
+relationship being another type of property?)
+- possible types of relationships between
+objects [needs work]:
+- is-a [i.e., object to class]
+- is-part-of (reverse is consists-of; which
+one to use, or both?)
+- is-contained-in (physically, like things in
+a room or box)
+- owns (is responsible for? steward?)
+- [what others??]
+
+Thoughts??
+
+Thanks,
+Luke
+
+--------------------------------
+End of general-digest-list Digest V00 Issue #3
+**********************************************
+
+
+
+

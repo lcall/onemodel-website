@@ -1,0 +1,206 @@
+From - Tue Feb 20 18:08:28 2001
+X-UIDL: ada0c276a9331f71
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Return-Path: <general-digest-list-request@onemodel.org>
+Delivered-To: lacall-onemodel:org-lacall@onemodel.org
+X-Envelope-To: lacall@onemodel.org
+Received: (qmail 70489 invoked by uid 800); 20 Feb 2001 14:11:07 -0000
+Date: 20 Feb 2001 14:11:07 -0000
+Message-ID: <20010220141107.70488.qmail@uruz.pair.com>
+To: lacall@onemodel.org
+References: <3A927AE2.4010408@onemodel.org>
+In-Reply-To: <3A927AE2.4010408@onemodel.org>
+X-Loop: general-digest-list@onemodel.org
+From: general-digest-list-request@onemodel.org
+Reply-To: Please.write.a.new.mail.instead.of.replying@FIRST.WORD.archive
+Content-ID: <"volume00/16"%general-digest-list-request@onemodel.org>
+Subject: archive retrieval: volume00/16
+Precedence: bulk
+Content-Disposition: inline; filename="volume00/16"
+Content-Type: message/rfc822;
+	directory="volume00"; name="16"
+MIME-Version: 1.0
+
+From: general-digest-list-request@onemodel.org
+Subject: general-digest-list Digest V00 #16
+X-Loop: general-digest-list@onemodel.org
+X-Mailing-List: <general-digest-list@onemodel.org> archive/volume00/16
+Precedence: list
+MIME-Version: 1.0
+Content-Type: multipart/digest; boundary="----------------------------"
+To: general-digest-list@onemodel.org
+Reply-To: general-list@onemodel.org
+
+------------------------------
+
+Content-Type: text/plain
+
+general-digest-list Digest				Volume 00 : Issue 16
+
+Today's Topics:
+  Re: [Fwd: Modeling Relations -- Re:   [ Mark Butler <butlerm@middle.net> ]
+  Re: [Fwd: Modeling Relations -- Re:   [ "Tom and other Packers" <TomP@Burgo ]
+
+------------------------------
+
+Date: Thu, 31 Aug 2000 10:28:03 -0600
+From: Mark Butler <butlerm@middle.net>
+To: general-list@onemodel.org
+Subject: Re: [Fwd: Modeling Relations -- Re: use cases]
+Message-ID: <39AE8793.B62BB405@middle.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+I am glad to hear some basic agreement from Lee and Tom.  One thing we should
+do to keep our semantics correct, however, is to only use the terms "node" and
+"internode" in the proper sense that Tom has specified.
+
+I beleive an internode is a strict singular vector relationship between two
+proper "nodes" and nothing else.  I have been calling a lot of other entity
+relationships "internodes", which is wrong.  From now on, I suggest we call
+any arbitrary abstraction an "entity" and use the term "relationship" to refer
+to an entity that relates two or more other entities together. 
+
+For data representation purposes, I beleive we can safely say:
+
+A "entity" is any abstraction.
+A "relationship" is a kind of "entity"
+
+A "node" is a kind of "entity"
+An "internode" is a kind of "relationship" which is a kind of "entity"
+
+The only problem with the word "entity" is that it is hard to say and to type.
+Sometimes the words "item" is a useful substitute.
+
+Any comments?
+
+ - Mark
+
+Lee Howard wrote:
+> 
+> Not that I wouldn't mind to disagree with Mark for disagreement's sake.
+> ;-)  (I'm teasing, Mark.)  And not that I really am all too anxious to
+> disagree with Tom.  (especially after recent lambashings...)  After all, it
+> is still his project...
+> 
+> But I'm agreeing with Mark on this.  I've agreed with Mark on this before
+> his earlier explanation.  (I just needed to make sure that I *was*
+> understanding what he was writing... at least regarding the internode vs.
+> node dilemma.)
+> 
+> The fundamental data design seems so much more simple to do things this
+> way, anyway, although I think it may appear to be more complex to those who
+> have viewed internodes as independent data sets from nodes for so long.
+> Viewing the data in this manner solves a number of conceptual problems that
+> I have had for so long in understanding internodes.
+> 
+> (as if anyone cared what I thought anyway...)
+> 
+> Lee.
+
+
+
+-- 
+Mark Butler	       ( butlerm@middle.net )
+Software Engineer  
+Epic Systems              
+(801)-451-4583
+
+------------------------------
+
+Date: Fri, 1 Sep 2000 14:01:48 -0600
+From: "Tom and other Packers" <TomP@Burgoyne.Com>
+To: <general-list@onemodel.org>
+Subject: Re: [Fwd: Modeling Relations -- Re: use cases]
+Message-ID: <004f01c0144f$8fcca7e0$1b0fa8c0@oemcomputer>
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+Mark
+
+    This sounds very well thought out and appropriate.  I'll talk to you
+more about this at the "meeting" tomorrow.
+
+    I'm not necessarily voting for dinner tomorrow, by the way, so ... we'll
+have to see what everybody else wants.
+
+tomp
+
+----- Original Message -----
+From: Mark Butler <butlerm@middle.net>
+To: <general-list@onemodel.org>
+Sent: Thursday, August 31, 2000 10:28 AM
+Subject: Re: [Fwd: Modeling Relations -- Re: use cases]
+
+
+I am glad to hear some basic agreement from Lee and Tom.  One thing we
+should
+do to keep our semantics correct, however, is to only use the terms "node"
+and
+"internode" in the proper sense that Tom has specified.
+
+I beleive an internode is a strict singular vector relationship between two
+proper "nodes" and nothing else.  I have been calling a lot of other entity
+relationships "internodes", which is wrong.  From now on, I suggest we call
+any arbitrary abstraction an "entity" and use the term "relationship" to
+refer
+to an entity that relates two or more other entities together.
+
+For data representation purposes, I beleive we can safely say:
+
+A "entity" is any abstraction.
+A "relationship" is a kind of "entity"
+
+A "node" is a kind of "entity"
+An "internode" is a kind of "relationship" which is a kind of "entity"
+
+The only problem with the word "entity" is that it is hard to say and to
+type.
+Sometimes the words "item" is a useful substitute.
+
+Any comments?
+
+ - Mark
+
+Lee Howard wrote:
+>
+> Not that I wouldn't mind to disagree with Mark for disagreement's sake.
+> ;-)  (I'm teasing, Mark.)  And not that I really am all too anxious to
+> disagree with Tom.  (especially after recent lambashings...)  After all,
+it
+> is still his project...
+>
+> But I'm agreeing with Mark on this.  I've agreed with Mark on this before
+> his earlier explanation.  (I just needed to make sure that I *was*
+> understanding what he was writing... at least regarding the internode vs.
+> node dilemma.)
+>
+> The fundamental data design seems so much more simple to do things this
+> way, anyway, although I think it may appear to be more complex to those
+who
+> have viewed internodes as independent data sets from nodes for so long.
+> Viewing the data in this manner solves a number of conceptual problems
+that
+> I have had for so long in understanding internodes.
+>
+> (as if anyone cared what I thought anyway...)
+>
+> Lee.
+
+
+
+--
+Mark Butler        ( butlerm@middle.net )
+Software Engineer
+Epic Systems
+(801)-451-4583
+
+--------------------------------
+End of general-digest-list Digest V00 Issue #16
+***********************************************
+
+
+
+
