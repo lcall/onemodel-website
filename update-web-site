@@ -2,4 +2,4 @@
 
 #scp -rp * uruz.pair.com:public_html/
 
-rsync --recursive --links --perms --times --compress --delete-after --delete-excluded --exclude=".git" --exclude="update-web-site" --exclude="*~" --exclude=".gitignore" --rsh=ssh -v . uruz.pair.com:public_html
+rsync --recursive --links --perms --times --compress --delete-after --delete-excluded --exclude=".git" --exclude="update-web-site" --exclude="*~" --exclude=".gitignore" --exclude="onemodel-0-0?.zip" --rsh=ssh -v . uruz.pair.com:public_html
